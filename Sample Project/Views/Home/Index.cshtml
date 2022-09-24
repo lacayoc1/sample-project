@@ -1,0 +1,205 @@
+﻿<h1>Products</h1>
+<div id="alertLoading" class="alert alert-info" role="alert">Loading</div>
+<div id="alertError" class="alert alert-danger" role="alert"></div>
+
+<button id="btnProduct" class="btn btn-primary" onclick="onClickNewProduct()">Add a Product</button>
+
+<ul id="listProducts"></ul>
+
+<!-- Bootstrap Modal: Products -->
+<div id="modalProduct" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Products</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form onsubmit="onSubmitForm();return false;">
+                <input type="hidden" id="hiddenProductId" value="" />
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputProductName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="inputProductName" maxlength="255" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputProductDescription" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="inputProductDescription" maxlength="255" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputProductQuantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="inputProductQuantity" min="0" step="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputProductPrice" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="inputProductPrice" min="0.00" max="10000.00" step="0.01" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ddProductVisible" class="form-label">Visible to the public?</label>
+                        <select class="form-select" aria-label="This product is visible to the public" id="ddProductVisible">
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        // bootstrap modal
+        const modalProduct = new bootstrap.Modal(document.getElementById("modalProduct"), {
+            backdrop: 'static',
+            keyboard: false
+        });
+
+        // get the list from the HTML
+        const alertLoading = document.getElementById('alertLoading');
+        const alertError = document.getElementById('alertError');
+        const list = document.getElementById('listProducts');
+
+        alertLoading.style.display = 'block';
+        alertError.style.display = 'none';
+
+        // connect to the api
+        fetch(`/api/ProductsApi/GetProduct`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // create a list using the data
+                data.forEach(function (item) {
+                    var li = document.createElement('li');
+                    li.innerHTML = `
+    ${item.ProductName}
+    <button class='btn btn-success btn-sm' onClick="onClickEditProduct(${item.ProductId},'${item.ProductName}','${item.ProductDescription}',${item.ProductPrice},${item.ProductQuantity},'${item.ProductVisible}')">Edit</button>
+    <button class='btn btn-danger btn-sm' onClick='onClickDeleteProduct(${item.ProductId})'>Delete</button>`;
+                    list.appendChild(li);
+                });
+            })
+            .catch(
+                error => {
+                    console.error("Error >>", error);
+                    alertError.style.display = 'block';
+                    var p = document.createElement('p');
+                    p.textContent = `Error: ${error.Message}`;
+                    alertError.appendChild(li);
+                })
+            .finally(() => {
+                alertLoading.style.display = 'none';
+            });
+
+        // onSubmit: Submit the data
+        function onSubmitForm() {
+            alertLoading.style.display = 'block';
+            const hiddenProductId = document.getElementById("hiddenProductId").value;
+            var methodType = "POST";
+            var methodURI = "PostProduct";
+            if (hiddenProductId !== "") {
+                methodType = "PUT";
+                methodURI = `PutProduct/${hiddenProductId}`;
+            }
+
+            let data = {
+                ProductName: document.getElementById("inputProductName").value,
+                ProductDescription: document.getElementById("inputProductDescription").value,
+                ProductPrice: document.getElementById("inputProductPrice").value,
+                ProductQuantity: document.getElementById("inputProductQuantity").value,
+                ProductVisible: document.getElementById("ddProductVisible").value,
+                ProductImages: ''
+            };
+            console.log(data);
+
+            // update or add the value through api
+            fetch(`/api/ProductsApi/${methodURI}`, {
+                method: methodType,
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    alert("Success!");
+                    location.reload();
+                })
+                .catch(
+                    error => {
+                        console.error("Error >>", error);
+                    })
+                .finally(() => {
+                    alertLoading.style.display = 'none';
+                });
+        }
+
+        // onClick: Delete a data
+        function onClickDeleteProduct(ProductId) {
+            if (confirm(`Are you sure that you want to delete this item?`)) {
+                // delete the item
+                fetch(`/api/ProductsApi/DeleteProduct/${ProductId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        alert("Success! The item has been removed");
+                        location.reload();
+                    })
+                    .catch(
+                        error => {
+                            console.error("Error >>", error);
+                        })
+                    .finally(() => {
+                        alertLoading.style.display = 'none';
+                    });
+            }
+        }
+
+        // onClick: Add a new item
+        function onClickNewProduct() {
+            // display the window
+            modalProduct.show();
+
+            // reset the values
+            document.getElementById("hiddenProductId").value = "";
+            document.getElementById("inputProductName").value = "";
+            document.getElementById("inputProductDescription").value = "";
+            document.getElementById("inputProductQuantity").value = "1";
+            document.getElementById("inputProductPrice").value = "0.00";
+            document.getElementById("ddProductVisible").value = "false";
+        }
+
+        // onClick: Edit Item
+        function onClickEditProduct(ProductId, ProductName, ProductDescription, ProductPrice, ProductQuantity, ProductVisible) {
+            // display the window
+            modalProduct.show();
+            // pass values to the input fields
+            document.getElementById("hiddenProductId").value = ProductId;
+            document.getElementById("inputProductName").value = ProductName;
+            document.getElementById("inputProductDescription").value = ProductDescription;
+            document.getElementById("inputProductQuantity").value = ProductQuantity;
+            document.getElementById("inputProductPrice").value = ProductPrice;
+            document.getElementById("ddProductVisible").value = ProductVisible;
+        }
+    </script>
+}

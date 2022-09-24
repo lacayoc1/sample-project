@@ -1,0 +1,72 @@
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Sample Project.dll.config
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Sample Project.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Sample Project.pdb
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csc.exe
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csc.exe.config
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csc.rsp
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csi.exe
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csi.exe.config
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\csi.rsp
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Buffers.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Memory.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\vbc.exe
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\vbc.exe.config
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\vbc.rsp
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Antlr3.Runtime.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Castle.Core.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Castle.Windsor.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Newtonsoft.Json.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Net.Http.Formatting.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Helpers.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Http.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Http.WebHost.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Mvc.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Optimization.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Razor.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\WebGrease.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Castle.Core.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Castle.Windsor.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Newtonsoft.Json.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Net.Http.Formatting.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Helpers.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Http.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Http.WebHost.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Mvc.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Optimization.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.Razor.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Antlr3.Runtime.pdb
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\obj\Debug\Sample Project.csproj.AssemblyReference.cache
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\obj\Debug\Sample Project.csproj.CoreCompileInputs.cache
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\obj\Debug\Sample Project.csproj.CopyComplete
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\obj\Debug\Sample Project.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\obj\Debug\Sample Project.pdb
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Dapper.dll
+C:\Users\Rances Lacayo\source\repos\Sample Project\Sample Project\bin\Dapper.xml
